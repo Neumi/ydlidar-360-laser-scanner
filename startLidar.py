@@ -11,11 +11,14 @@ ser = serial.Serial(
     timeout=None
 )
 
+# print cloud data
+# ser.write("\xa5")
+# ser.write("\x00")
+# ser.write("\xa5")
+# ser.write("\x60")
 
-print(ser.write("\xa5"))
-print(ser.write("\x00"))
-print(ser.write("\xa5"))
-print(ser.write("\x60"))
+# ser.write("\xa5")
+# ser.write("\x40")
 ## exit()
 
 
@@ -23,3 +26,5 @@ print(ser.write("\x60"))
 while 1:
     a = ser.read()
     print hex(int(a.encode('hex'), 16))
+    # print int(a)
+
